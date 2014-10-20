@@ -1,0 +1,36 @@
+{
+  "name": "angular-app-boilerplate",
+  "version": "0.0.0",
+  "description": "Manage Grunt Dependencies",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mikeyamadeo/angular-app-boilerplate.git"
+  },
+  "keywords": [
+    "boilerplate",
+    "angular",
+    "app",
+    "grunt",
+    "bower"
+  ],
+  "author": "Mikey Murphy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mikeyamadeo/angular-app-boilerplate/issues"
+  },
+  "homepage": "https://github.com/mikeyamadeo/angular-app-boilerplate",
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-concat": "~0.5.0",
+    "grunt-contrib-connect": "~0.8.0",
+    "grunt-contrib-copy": "~0.7.0",
+    "grunt-contrib-clean": "~0.6.0",
+    "grunt-contrib-sass": "~0.8.1",
+    "grunt-contrib-cssmin": "~0.10.0",
+    "grunt-contrib-watch": "~0.6.1"
+  }
+}
