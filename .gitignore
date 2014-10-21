@@ -4,10 +4,12 @@ bower_components
 
 # Managed w/ grunt #
 ####################
-src/app.js 
+
+src/app.js
 src/app/lib
 src/styles/lib
 src/styles.css
+src/styles.css.map
 
 
 
