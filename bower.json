@@ -1,0 +1,41 @@
+{
+  "name": "angular-app-boilerplate",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mikeyamadeo/angular-app-boilerplate",
+  "authors": [
+    "Mikey Murphy <mikeyamadeo@gmail.com>"
+  ],
+  "description": "Manage javascript and css/sass app dependencies",
+  "main": "src",
+  "keywords": [
+    "library",
+    "dependencies",
+    "javascript",
+    "sass"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.0",
+    "angular-ui-router": "~0.2.11",
+    "inuit-starter-kit": "~0.2.8",
+    "inuit-reset": "~0.1.1",
+    "inuit-images": "~0.3.2",
+    "inuit-headings": "~0.2.2",
+    "inuit-layout": "~0.3.2",
+    "inuit-clearfix": "~0.2.1",
+    "inuit-widths": "~0.3.2",
+    "inuit-responsive-settings": "~0.1.3",
+    "inuit-widths-responsive": "~0.1.3",
+    "inuit-spacing": "~0.6.2",
+    "inuit-list-bare": "~0.3.0",
+    "inuit-lists": "~0.1.0",
+    "inuit-list-ui": "~0.4.1"
+  }
+}
