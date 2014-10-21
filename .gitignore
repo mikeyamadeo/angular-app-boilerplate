@@ -2,6 +2,16 @@ node_modules
 bower_components
 .sass-cache
 
+# Managed w/ grunt #
+####################
+src/app.js 
+src/app/lib
+src/styles/lib
+src/styles.css
+
+
+
+
 # Compiled source #
 ###################
 *.com
