@@ -117,7 +117,7 @@ module.exports = (grunt) ->
     sass:
       dist:
         files:
-          "src/styles/main.css": "src/styles/main.scss"
+          "src/styles.css": "src/styles/main.scss"
 
     cssmin:
       add_banner:
