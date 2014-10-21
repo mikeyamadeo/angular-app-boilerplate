@@ -1,0 +1,1 @@
+Generate boilerplate for an angular app based on personal architecture, naming convention, technology and tooling preferences.
