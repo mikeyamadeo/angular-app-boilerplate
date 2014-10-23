@@ -1,0 +1,133 @@
+/*------------------------------------*\
+    #APP
+\*------------------------------------*/
+
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * [inuit]Settings...........FRAMEWORK DEPENDENCY | variables & settings.
+ *
+ * TOOLS
+ * [inuit]Functions..........FRAMEWORK DEPENDENCY | functions.
+ * [inuit]Mixins.............FRAMEWORK DEPENDENCY | mixins.
+ *
+ * GENERIC
+ * [inuit]Normalize..........FRAMEWORK DEPENDENCY | reset.
+ * [inuit]Reset..............helpful resets in addition to normalize.
+ * [inuit]Box-sizing.........FRAMEWORK DEPENDENCY | better default `box-sizing`.
+ *
+ * BASE
+ * [inuit]Page...............FRAMEWORK DEPENDENCY High-, page-level styling.
+ * [inuit]images.............provides very basic styling for images.
+ * [inuit]headings...........defines font sizes for h1-h6 heading elements.
+ *   Uitilizes inuit spacing variables to create vertical rhythm.
+ *
+ * OBJECTS
+ * [inuit]Box................simple object to make boxed-off content.
+ * [inuit]Layout............."powerful, flexible, highly advanced 
+ *   evolution of the traditional grid system." Used w/ inuit-widths.
+ *
+ * COMPONENTS
+ *
+ * TRUMPS
+ * [inuit]Clearfix...........FRAMEWORK DEPENDENCY | clearfix.
+ * [inuit]Widths.............Text helpers.
+ * [inuit]Spacing............Text helpers.
+ *
+ *
+ * Taken from http://cssguidelin.es/
+ *
+ */
+
+
+
+
+
+/**
+ * #SETTINGS - Global variables, site-wide settings, config switches, etc.
+ */
+@import "lib/inuit-defaults/settings.defaults";
+// @import "settings.colors";
+// @import "settings.global";
+
+
+
+
+/**
+ * #TOOLS - Site-wide mixins and functions.
+ */
+@import "lib/inuit-functions/tools.functions";
+@import "lib/inuit-mixins/tools.mixins";
+
+
+
+
+/**
+ * #GENERIC - Low-specificity, far-reaching rulesets (e.g. resets).
+ */
+@import "lib/inuit-normalize/generic.normalize";
+@import "lib/inuit-reset/generic.reset";
+@import "lib/inuit-box-sizing/generic.box-sizing";
+
+
+
+
+
+/**
+ * #BASE - Unclassed HTML elements (e.g. a {}, blockquote {}, address {}).
+ */
+@import "lib/inuit-page/base.page";
+@import "lib/inuit-images/base.images";
+@import "lib/inuit-headings/base.headings";
+// @import "base.type";
+//fixes fastclick bug: https://github.com/ftlabs/fastclick/issues/60
+label > * { pointer-events: none; }
+
+
+
+
+
+/**
+ * #OBJECTS - Objects, abstractions, and design patterns (e.g. .media {}).
+ */
+$inuit-enable-box--flush:   true;
+$inuit-enable-box--tiny:    true;
+@import "lib/inuit-box/objects.box";
+/**
+ * Remember:
+ * http://css-tricks.com/fighting-the-space-between-inline-block-elements/
+ */
+$inuit-enable-layout--flush:    true;
+$inuit-enable-layout--middle:   true;
+$inuit-enable-layout--center:   true;
+@import "lib/inuit-layout/objects.layout";
+
+
+
+
+
+/**
+ * #COMPONENTS - Discrete, complete chunks of UI (e.g. .carousel {}).
+ */
+
+
+
+
+/**
+ * #TRUMPS - High-specificity, very explicit selectors. Overrides and helper classes.
+ */
+@import "lib/inuit-clearfix/trumps.clearfix";
+@import "lib/inuit-widths/trumps.widths";
+$inuit-enable-margins:                  true;
+$inuit-enable-paddings:                 true;
+@import "lib/inuit-spacing/trumps.spacing";
+// @import "trumps.centering";
+
+
+
+
+
+
+
+
