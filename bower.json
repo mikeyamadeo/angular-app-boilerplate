@@ -36,6 +36,8 @@
     "inuit-spacing": "~0.6.2",
     "inuit-list-bare": "~0.3.0",
     "inuit-lists": "~0.1.0",
-    "inuit-list-ui": "~0.4.1"
+    "inuit-list-ui": "~0.4.1",
+    "bourbon": "~4.0.2",
+    "inuit-box": "~0.4.4"
   }
 }
