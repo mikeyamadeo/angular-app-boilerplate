@@ -8,7 +8,7 @@ module.exports = (grunt) ->
 
     paths:
       libSrcPath: "bower_components"
-      jsLibPath: "src/app/lib"
+      jsLibPath: "src/lib"
       sassLibPath: "src/styles/lib"
 
 
@@ -16,8 +16,10 @@ module.exports = (grunt) ->
   #   Concat
 
     concat:
-      dist:
+      dev:
         src: [
+          "<%= paths.libSrcPath %>/angular/angular.js",
+          "<%= paths.libSrcPath %>/angular-ui-router/release/angular-ui-router.js",
           "src/app/**/*.js" 
         ]
         dest: "src/app.js"
@@ -81,7 +83,6 @@ module.exports = (grunt) ->
 
       libs:
         src: [
-          "src/app/lib"
           "src/styles/lib"
         ]
 
@@ -89,16 +90,6 @@ module.exports = (grunt) ->
       #development depencies
       libs: 
         files: [
-          #javascript libraries
-          {
-            cwd: "<%= paths.libSrcPath %>"
-            src: [
-              "angular/angular.js"
-              "angular-ui-router/release/angular-ui-router.js"
-            ]
-            dest: "<%= paths.jsLibPath %>"
-            expand: true
-          }
           #sass libraries
           {
             cwd: "<%= paths.libSrcPath %>"
