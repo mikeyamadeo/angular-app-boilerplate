@@ -11,6 +11,9 @@ src/app/lib
 src/styles/lib
 src/styles.css
 src/styles.css.map
+src/styles/main.css
+src/styles/main.css.map
+src/styles/styles.min.css
 
 
 
