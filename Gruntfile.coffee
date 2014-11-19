@@ -20,7 +20,8 @@ module.exports = (grunt) ->
         src: [
           "<%= paths.libSrcPath %>/angular/angular.js",
           "<%= paths.libSrcPath %>/angular-ui-router/release/angular-ui-router.js",
-          "src/app/**/*.js" 
+          "src/app/**/*.module.js",
+          "src/app/**/*.js"
         ]
         dest: "src/app.js"
 
@@ -38,6 +39,7 @@ module.exports = (grunt) ->
         tasks: [
           "concat"
           "sass"
+          "cssmin"
         ]
         options:
           spawn: false
@@ -101,6 +103,22 @@ module.exports = (grunt) ->
           }
         ]
 
+      build:
+        files: [
+          {
+            cwd: "src"
+            src: [
+              "index.html",
+              "app.js",
+              "styles/styles.min.css",
+              "assets/**",
+              "app/**/*.html"
+            ]
+            dest: "dist"
+            expand: true
+          }
+        ]
+
 
   #----------------------
   #   sass & cssmin
@@ -108,7 +126,7 @@ module.exports = (grunt) ->
     sass:
       dist:
         files:
-          "src/styles.css": "src/styles/main.scss"
+          "src/styles/main.css": "src/styles/main.scss"
 
     cssmin:
       add_banner:
@@ -116,7 +134,7 @@ module.exports = (grunt) ->
           banner: "/* minified css file */"
 
         files:
-          "src/styles.min.css": ["src/styles/main.css"]
+          "src/styles/styles.min.css": ["src/styles/main.css"]
 
 
 #----------------------------
@@ -135,6 +153,14 @@ module.exports = (grunt) ->
     "sass",
     "connect",
     "watch"
+  ]
+
+  grunt.registerTask "build", [
+    "clean:build",
+    "concat",
+    "sass",
+    "cssmin",
+    "copy:build"
   ]
 
 
