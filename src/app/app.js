@@ -3,14 +3,19 @@
 
     angular
         .module('app')
-        .controller('baseCtrl', baseCtrl);
+        .controller('appCtrl', ctrl);
 
-    baseCtrl.$inject = [ '$scope' ];
+    //don't forget to inject
+    ctrl.$inject = [ ];
 
-    function baseCtrl( $scope ) {
+    function ctrl( ) {
+        var vm = this;
+        vm.message = "Be responsible for the existence of something awesome."
 
-        
-
+        ///////////////////////////////////////////////
+        // Implementation should stay below the "fold"
     }
+
+
 
 })();
