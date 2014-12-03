@@ -24,12 +24,12 @@
           ga('send', 'pageview');
 
         </script>
-
     </head>
-    <body ng-app="app" class="">
+    <body ng-app="app">
 
         <div ng-controller="appCtrl as app">
-          <ui-view>
+            {{ app.message }}
+            <ui-view>
         </div>
 
         <script src="app.js"></script>
