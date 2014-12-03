@@ -136,6 +136,25 @@ module.exports = (grunt) ->
         files:
           "src/styles/styles.min.css": ["src/styles/main.css"]
 
+  #----------------------
+  #   testing
+
+    karma:   
+      unit: 
+        options: 
+          frameworks: ['jasmine']
+          singleRun: true
+          browsers: ['PhantomJS']
+          files: [
+            "<%= paths.libSrcPath %>/angular/angular.js"
+            "<%= paths.libSrcPath %>/angular-mocks/angular-mocks.js"
+            "<%= paths.libSrcPath %>/angular-ui-router/release/angular-ui-router.js"
+            "<%= paths.libSrcPath %>/angular-data/dist/angular-data.js"
+            "src/app/**/*.module.js"
+            "src/app/**/*.js"
+          ]
+
+
 
 #----------------------------
 #   Load tasks
@@ -163,5 +182,8 @@ module.exports = (grunt) ->
     "copy:build"
   ]
 
+  grunt.registerTask "test", [  
+    "karma"
+  ]
 
   return
