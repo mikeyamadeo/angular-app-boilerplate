@@ -18,10 +18,12 @@ module.exports = (grunt) ->
     concat:
       dev:
         src: [
-          "<%= paths.libSrcPath %>/angular/angular.js",
-          "<%= paths.libSrcPath %>/angular-ui-router/release/angular-ui-router.js",
-          "src/app/**/*.module.js",
+          "<%= paths.libSrcPath %>/angular/angular.js"
+          "<%= paths.libSrcPath %>/angular-ui-router/release/angular-ui-router.js"
+          "<%= paths.libSrcPath %>/angular-data/dist/angular-data.js"
+          "src/app/**/*.module.js"
           "src/app/**/*.js"
+          "!src/app/**/*.tests.js"
         ]
         dest: "src/app.js"
 
