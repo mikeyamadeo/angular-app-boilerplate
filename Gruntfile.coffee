@@ -18,9 +18,9 @@ module.exports = (grunt) ->
     concat:
       dev:
         src: [
-          "<%= paths.libSrcPath %>/angular/angular.js"
-          "<%= paths.libSrcPath %>/angular-ui-router/release/angular-ui-router.js"
-          "<%= paths.libSrcPath %>/angular-data/dist/angular-data.js"
+          "<%= paths.libSrcPath %>/angular/angular.min.js"
+          "<%= paths.libSrcPath %>/angular-ui-router/release/angular-ui-router.min.js"
+          "<%= paths.libSrcPath %>/angular-data/dist/angular-data.min.js"
           "src/app/**/*.module.js"
           "src/app/**/*.js"
           "!src/app/**/*.tests.js"
@@ -138,6 +138,11 @@ module.exports = (grunt) ->
         files:
           "src/styles/styles.min.css": ["src/styles/main.css"]
 
+    uglify:
+      js:
+        src: ["dist/app.js"]
+        dest: "dist/app.js"
+
   #----------------------
   #   testing
 
@@ -168,20 +173,21 @@ module.exports = (grunt) ->
 #   Register tasks
 
   grunt.registerTask "go", [
-    "clean:libs", 
-    "copy:libs",
-    "concat",
-    "sass",
-    "connect",
+    "clean:libs"
+    "copy:libs"
+    "concat"
+    "sass"
+    "connect"
     "watch"
   ]
 
   grunt.registerTask "build", [
-    "clean:build",
-    "concat",
-    "sass",
-    "cssmin",
+    "clean:build"
+    "concat"
+    "sass"
+    "cssmin"
     "copy:build"
+    "uglify"
   ]
 
   grunt.registerTask "test", [  
