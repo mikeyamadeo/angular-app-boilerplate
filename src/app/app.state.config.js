@@ -10,14 +10,14 @@
 
     function routing($stateProvider, $urlRouterProvider) {
 
-        $urlRouterProvider.otherwise('/quotes');
+        // $urlRouterProvider.otherwise('/');
 
-        $stateProvider
+        // $stateProvider
 
-            .state('quotes', {
-                url: '/quotes',
-                templateUrl: 'app/quotes/quotes.html'
-            });
+        //     .state('app', {
+        //     url: '/'
+        //         // templateUrl: 'app/quotes/quotes.html'
+        // });
 
         ///////////////////////////////////////////////
         // Implementation should stay below the "fold"
