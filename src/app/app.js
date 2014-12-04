@@ -6,11 +6,12 @@
         .controller('appCtrl', ctrl);
 
     //don't forget to inject
-    ctrl.$inject = [ ];
+    ctrl.$inject = [];
 
-    function ctrl( ) {
+    function ctrl() {
+        /*jshint validthis: true */
         var vm = this;
-        vm.message = "Be responsible for the existence of something awesome."
+        vm.message = "Be responsible for the existence of something awesome.";
 
         ///////////////////////////////////////////////
         // Implementation should stay below the "fold"
