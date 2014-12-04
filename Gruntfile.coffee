@@ -28,6 +28,14 @@ module.exports = (grunt) ->
         dest: "src/app.js"
 
   #----------------------
+  #   jshint
+
+    jshint:
+      src: [
+        "src/app/**/*.js"
+      ]
+
+  #----------------------
   #   Watch
 
     watch:
@@ -42,6 +50,7 @@ module.exports = (grunt) ->
           "concat"
           "sass"
           "cssmin"
+          "jshint"
         ]
         options:
           spawn: false
@@ -83,7 +92,9 @@ module.exports = (grunt) ->
 
     clean:
       build:
-        src: ["dist"]
+        src: [
+          "dist"
+        ]
 
       libs:
         src: [
@@ -91,7 +102,6 @@ module.exports = (grunt) ->
         ]
 
     copy:
-      #development depencies
       libs: 
         files: [
           #sass libraries
@@ -123,12 +133,15 @@ module.exports = (grunt) ->
 
 
   #----------------------
-  #   sass & cssmin
+  #   SASS
 
     sass:
       dist:
         files:
           "src/styles/main.css": "src/styles/main.scss"
+
+  #----------------------
+  #   File Minification
 
     cssmin:
       add_banner:
@@ -144,7 +157,7 @@ module.exports = (grunt) ->
         dest: "dist/app.js"
 
   #----------------------
-  #   testing
+  #   Testing
 
     karma:   
       unit: 
@@ -161,7 +174,7 @@ module.exports = (grunt) ->
             "src/app/**/*.js"
           ]
 
-
+  
 
 #----------------------------
 #   Load tasks
