@@ -9,4 +9,4 @@ describe('appCtrl', function() {
     it('should instantiate properties', function() {
         expect(ctrl.message).not.toBeUndefined();
     });
-})
+});
